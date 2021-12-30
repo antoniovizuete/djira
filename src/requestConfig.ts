@@ -1,8 +1,3 @@
-import { AxiosRequestConfig } from './axios-types.d.ts';
+import { DFetchRequestConfig } from "@dfetch";
 
-export type RequestConfig = Omit<AxiosRequestConfig,
-| "validateStatus"
-| "transformRequest"
-| "transformResponse"
-
->;
+export type RequestConfig = DFetchRequestConfig;

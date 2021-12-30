@@ -9,11 +9,11 @@ import {
 export namespace AuthenticationService {
   export async function getAuthenticationToken(
     authentication: Config.Authentication | undefined,
-    requestData?: {
+    /*requestData?: {
       baseURL: string;
       url: string;
       method: string;
-    },
+    },*/
   ): Promise<string | undefined> {
     if (!authentication) {
       return undefined;
@@ -24,7 +24,8 @@ export namespace AuthenticationService {
     }
 
     if (authentication.oauth) {
-      return createOAuthAuthenticationToken(authentication.oauth, requestData!);
+      throw new Error("Not implemented yet.");
+      //return createOAuthAuthenticationToken(authentication.oauth, requestData!);
     }
 
     if (authentication.oauth2) {
@@ -32,7 +33,8 @@ export namespace AuthenticationService {
     }
 
     if (authentication.jwt) {
-      return createJWTAuthentication(authentication.jwt, requestData!);
+      throw new Error("Not implemented yet.");
+      //return createJWTAuthentication(authentication.jwt, requestData!);
     }
 
     return undefined;
