@@ -14,6 +14,7 @@ export class BaseClient implements Client {
 
   constructor(protected readonly config: Config) {
     this.dfetch = new DFetch({
+      paramsSerializer: this.paramSerializer.bind(this),
       ...config.baseRequestConfig,
       baseURL: config.host,
       headers: this.removeUndefinedProperties({
