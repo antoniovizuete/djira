@@ -1,0 +1,15 @@
+import { Sprint } from '../models/mod.ts';
+
+export interface PartiallyUpdateSprint {
+  /** The ID of the sprint to update. */
+  sprintId: number;
+  id?: number;
+  self?: string;
+  state?: string | Sprint.State;
+  name?: string;
+  startDate?: string | Date;
+  endDate?: string | Date;
+  completeDate?: string;
+  originBoardId?: number;
+  goal?: string;
+}
