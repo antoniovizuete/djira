@@ -1,4 +1,4 @@
-import DFetch from "@dfetch";
+import { DFetch } from "../deps.ts";
 import type { Client } from './client.ts';
 import type { Config } from '../utils/config.ts';
 import { AuthenticationService } from '../services/authenticationService/mod.ts';
