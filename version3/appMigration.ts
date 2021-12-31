@@ -68,7 +68,7 @@ export class AppMigration {
       headers: {
         'Atlassian-Transfer-Id': parameters.transferId,
       },
-      data: parameters.body,
+      data: { ...parameters.body },
     };
 
     return this.client.sendRequest(config, callback);

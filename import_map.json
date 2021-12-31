@@ -1,5 +1,5 @@
 {
   "imports": {
-    "@dfetch": "https://deno.land/x/dfetch@0.1.8/mod.ts"
+    "@dfetch": "https://deno.land/x/dfetch@0.1.9/mod.ts"
   }
 }
